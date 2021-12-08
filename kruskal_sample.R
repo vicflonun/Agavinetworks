@@ -16,11 +16,10 @@ library("pheatmap")
 library("colorspace")
 library("ggrepel")
 
-# Load data from get_OTU_table.R (Agave_Networking package)
-data.base="cam"
-load(file = paste(getwd(),paste(data.base,"CAM_metadata_table", sep = "/"),sep = "/"))
-load(file = paste(getwd(),paste(data.base,"CAM_OTU_table", sep = "/"),sep = "/"))
-load(file = paste(getwd(),paste(data.base,"CAM_taxonomy_table", sep = "/"),sep = "/"))
+# Load data 
+load(file = paste(getwd(),"CAM_metadata_table", sep = "/"))
+load(file = paste(getwd(),"CAM_OTU_table",sep = "/"))
+load(file = paste(getwd(),"CAM_taxonomy_table",sep = "/"))
 
 #Merge cacti if needed
 meta[meta$Specie %in% c("O.robusta","M.geometrizans"),"Specie"]=c("Cacti")
